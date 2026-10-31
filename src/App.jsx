@@ -22,6 +22,7 @@ export default function App() {
   }), [tasks, query, filter])
   const hasNoSearchResult = query.trim().length > 0 && visibleTasks.length === 0
   const remaining = tasks.filter((task) => !task.done).length
+  const today = new Intl.DateTimeFormat('fa-IR', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date())
   const updateTask = (id, updates) => setTasks((current) => current.map((task) => task.id === id ? { ...task, ...updates } : task))
 
   function addTask(event) {
@@ -52,7 +53,7 @@ export default function App() {
                   ? <p className="search-error mb-0">برای «{query.trim()}» کاری پیدا نشد.</p>
                   : <p className="mb-0 text-white-50">هر قدم کوچک، یک پیشرفت بزرگ است.</p>}
               </div>
-              <span className="calendar-icon">✓</span>
+              <div className="hero-date"><span className="calendar-icon">✓</span><small>{today}</small></div>
             </div>
           </div>
         </div>

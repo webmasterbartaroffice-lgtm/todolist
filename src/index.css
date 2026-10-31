@@ -1,0 +1,10 @@
+﻿body {
+  min-height: 100vh;
+  background: #f4f7f6;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.todo-card { max-width: 680px; border-radius: 1rem; }
+.search-box { max-width: 220px; }
+.task-check { width: 1.15rem; height: 1.15rem; cursor: pointer; }
+.empty-icon { width: 3rem; height: 3rem; font-size: 1.4rem; }
+@media (max-width: 767.98px) { .search-box { max-width: none; } }

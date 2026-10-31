@@ -1,10 +1,26 @@
 ﻿body {
   min-height: 100vh;
-  background: #f4f7f6;
+  background: #f1f5f4;
   font-family: Tahoma, Arial, sans-serif;
 }
-.todo-card { max-width: 680px; border-radius: 1rem; }
+.todo-card { max-width: 680px; border-radius: 1.35rem; background: #fff; }
+.hero-strip { position: relative; overflow: hidden; background: linear-gradient(135deg, #08684f, #14916e); }
+.hero-orb { position: absolute; border-radius: 50%; background: rgba(255,255,255,.1); }
+.orb-one { width: 14rem; height: 14rem; left: -4rem; top: -8rem; }
+.orb-two { width: 8rem; height: 8rem; left: 8rem; bottom: -5rem; }
+.eyebrow { display: block; font-size: .78rem; font-weight: bold; letter-spacing: .04em; margin-bottom: .45rem; }
+.display-title { margin: 0 0 .45rem; font-size: 2rem; font-weight: 800; }
+.calendar-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: .85rem; font-size: 1.2rem; }
+.status-panel { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; background: #f7faf9; border: 1px solid #edf3f0; border-radius: 1rem; padding: .9rem; }
+.status-panel > div + div { border-right: 1px solid #e2ebe7; }
+.status-number, .status-label { display: block; }
+.status-number { font-size: 1.2rem; font-weight: 800; color: #1e3830; }
+.status-label { margin-top: .2rem; font-size: .72rem; color: #76847f; }
 .search-box { max-width: 220px; }
 .task-check { width: 1.15rem; height: 1.15rem; cursor: pointer; }
 .empty-icon { width: 3rem; height: 3rem; font-size: 1.4rem; }
+.input-group .form-control { border-color: #dce8e3; }
+.input-group .btn { border-radius: .6rem 0 0 .6rem; }
+.task-item { transition: background .2s ease; }
+.task-item:hover { background: #f8fbfa; }
 @media (max-width: 767.98px) { .search-box { max-width: none; } }

@@ -11,6 +11,7 @@
 .eyebrow { display: block; font-size: .78rem; font-weight: bold; letter-spacing: .04em; margin-bottom: .45rem; }
 .display-title { margin: 0 0 .45rem; font-size: 2rem; font-weight: 800; }
 .calendar-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.25); border-radius: .85rem; font-size: 1.2rem; }
+.search-error { display: inline-block; color: #fff; background: rgba(84, 24, 24, .34); border: 1px solid rgba(255, 255, 255, .25); border-radius: .5rem; padding: .38rem .65rem; font-size: .85rem; }
 .status-panel { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; background: #f7faf9; border: 1px solid #edf3f0; border-radius: 1rem; padding: .9rem; }
 .status-panel > div + div { border-right: 1px solid #e2ebe7; }
 .status-number, .status-label { display: block; }

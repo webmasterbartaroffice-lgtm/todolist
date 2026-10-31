@@ -20,6 +20,7 @@ export default function App() {
     const statusMatches = filter === 'all' || (filter === 'done' ? task.done : !task.done)
     return statusMatches && task.title.toLowerCase().includes(query.trim().toLowerCase())
   }), [tasks, query, filter])
+  const hasNoSearchResult = query.trim().length > 0 && visibleTasks.length === 0
   const remaining = tasks.filter((task) => !task.done).length
   const updateTask = (id, updates) => setTasks((current) => current.map((task) => task.id === id ? { ...task, ...updates } : task))
 
@@ -47,7 +48,9 @@ export default function App() {
               <div>
                 <span className="eyebrow">برنامه‌ریزی روزانه</span>
                 <h1 className="display-title">کارهای من</h1>
-                <p className="mb-0 text-white-50">هر قدم کوچک، یک پیشرفت بزرگ است.</p>
+                {hasNoSearchResult
+                  ? <p className="search-error mb-0">برای «{query.trim()}» کاری پیدا نشد.</p>
+                  : <p className="mb-0 text-white-50">هر قدم کوچک، یک پیشرفت بزرگ است.</p>}
               </div>
               <span className="calendar-icon">✓</span>
             </div>

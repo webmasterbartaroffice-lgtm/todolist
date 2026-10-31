@@ -67,7 +67,9 @@ export default function App() {
 
           <div className="toolbar d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 border-bottom pb-3 mb-2">
             <div className="task-search input-group input-group-sm search-box">
-              <span className="input-group-text">⌕</span>
+              <span className="input-group-text" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="6" /><path d="m20 20-4.2-4.2" /></svg>
+              </span>
               <input className="form-control" value={query} onChange={(event) => setQuery(event.target.value)} type="search" placeholder="جست‌وجوی کارها" />
             </div>
             <div className="task-filters btn-group btn-group-sm" role="group" aria-label="فیلتر وضعیت">

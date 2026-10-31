@@ -17,6 +17,15 @@
 .status-number { font-size: 1.2rem; font-weight: 800; color: #1e3830; }
 .status-label { margin-top: .2rem; font-size: .72rem; color: #76847f; }
 .search-box { max-width: 220px; }
+.toolbar { padding-top: .2rem; }
+.task-search .input-group-text, .task-search .form-control { background: #f7faf9; border-color: #dce8e3; color: #547068; }
+.task-search .input-group-text { border-radius: 0 .65rem .65rem 0; border-left: 0; font-size: 1rem; }
+.task-search .form-control { border-radius: .65rem 0 0 .65rem; border-right: 0; box-shadow: none; }
+.task-search:focus-within .input-group-text, .task-search:focus-within .form-control { background: #fff; border-color: #15906e; }
+.task-filters { background: #eef4f1; border-radius: .65rem; padding: .2rem; gap: .15rem; }
+.task-filters .btn { border: 0; border-radius: .45rem !important; color: #61736d; padding: .35rem .65rem; }
+.task-filters .btn:hover { color: #0e7658; background: #e1eee8; }
+.task-filters .btn-success { box-shadow: 0 2px 6px rgba(12, 112, 83, .2); color: #fff; }
 .task-check { width: 1.15rem; height: 1.15rem; cursor: pointer; }
 .empty-icon { width: 3rem; height: 3rem; font-size: 1.4rem; }
 .task-form { display: flex; align-items: stretch; gap: .65rem; }

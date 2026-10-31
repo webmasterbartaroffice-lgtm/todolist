@@ -65,13 +65,13 @@ export default function App() {
             <button className="task-submit btn btn-success fw-bold" type="submit"><span>+</span> افزودن</button>
           </form>
 
-          <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 border-bottom pb-3 mb-2">
-            <div className="input-group input-group-sm search-box">
-              <span className="input-group-text bg-white">⌕</span>
-              <input className="form-control border-start-0" value={query} onChange={(event) => setQuery(event.target.value)} type="search" placeholder="جست‌وجوی کارها" />
+          <div className="toolbar d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 border-bottom pb-3 mb-2">
+            <div className="task-search input-group input-group-sm search-box">
+              <span className="input-group-text">⌕</span>
+              <input className="form-control" value={query} onChange={(event) => setQuery(event.target.value)} type="search" placeholder="جست‌وجوی کارها" />
             </div>
-            <div className="btn-group btn-group-sm" role="group" aria-label="فیلتر وضعیت">
-              {Object.entries(filters).map(([key, label]) => <button className={`btn ${filter === key ? 'btn-success' : 'btn-outline-secondary'}`} onClick={() => setFilter(key)} type="button" key={key}>{label}</button>)}
+            <div className="task-filters btn-group btn-group-sm" role="group" aria-label="فیلتر وضعیت">
+              {Object.entries(filters).map(([key, label]) => <button className={`btn ${filter === key ? 'btn-success' : ''}`} onClick={() => setFilter(key)} type="button" key={key}>{label}</button>)}
             </div>
           </div>
 

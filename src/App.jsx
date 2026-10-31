@@ -60,9 +60,9 @@ export default function App() {
             <div><span className="status-number text-success">{tasks.length - remaining}</span><span className="status-label">انجام‌شده</span></div>
           </header>
 
-          <form className="input-group mb-3" onSubmit={addTask}>
-            <input className="form-control form-control-lg" value={title} onChange={(event) => setTitle(event.target.value)} maxLength="120" placeholder="کار جدیدی اضافه کن..." required />
-            <button className="btn btn-success px-4 fw-bold" type="submit">+ افزودن</button>
+          <form className="task-form mb-4" onSubmit={addTask}>
+            <input className="task-input form-control form-control-lg" value={title} onChange={(event) => setTitle(event.target.value)} maxLength="120" placeholder="کار جدیدی اضافه کن..." required />
+            <button className="task-submit btn btn-success fw-bold" type="submit"><span>+</span> افزودن</button>
           </form>
 
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 border-bottom pb-3 mb-2">
